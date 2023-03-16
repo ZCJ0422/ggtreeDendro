@@ -198,4 +198,15 @@ autoplot.multiLocalZScore <- function(object, ...) {
     autoplot.hclust(object@matrix[["FitRow"]], ...)
 }
 
-
+##' @rdname autoplot
+##' @method autoplot eclust
+##' @importFrom  eclust colhclust rowhclust
+##' @export
+autoplot.eclust <- function(object, bycol = TRUE, ...) {
+    if (bycol) {
+        hc <- colhclust(object)
+    } else {
+        hc <- rowhclust(object)
+    }
+    autoplot.hclust(hc, ...)
+}
