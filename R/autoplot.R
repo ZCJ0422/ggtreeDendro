@@ -211,3 +211,4 @@ autoplot.eclust <- function(object, bycol = TRUE, ...) {
     }
     autoplot.hclust(hc, ...)
 }
+
