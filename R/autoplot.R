@@ -200,7 +200,8 @@ autoplot.multiLocalZScore <- function(object, ...) {
 
 ##' @rdname autoplot
 ##' @method autoplot eclust
-##' @importFrom  eclust colhclust rowhclust
+##' @importFrom  eclust colhclust 
+##' @importFrom  eclust rowhclust
 ##' @export
 autoplot.eclust <- function(object, bycol = TRUE, ...) {
     if (bycol) {
